@@ -1,4 +1,4 @@
-package main // package github.com/YangChinFu/leetcode-go/2
+package main // package github.com/YangChinFu/leetcode-go/3-Longest_Substring_Without_Repeating_Characters
 
 import (
 	"strings"
@@ -24,5 +24,5 @@ func LengthOfLongestSubstring(s string) int {
 }
 
 func main() {
-	
+
 }
