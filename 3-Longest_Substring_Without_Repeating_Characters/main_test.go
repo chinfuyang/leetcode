@@ -22,6 +22,7 @@ func setUpTests() []Test {
 		{"leetcode test", "dvdf", 3},
 	}
 }
+
 func TestLengthOfLongestSubstringBrute(t *testing.T) {
 	tests := setUpTests()
 	for _, tt := range tests {
