@@ -44,3 +44,25 @@ func BenchmarkLengthOfLongestSubstringBrute(b *testing.B) {
 		})
 	}
 }
+
+func TestLengthOfLongestSubstringSlideWindow(t *testing.T) {
+	tests := setUpTests()
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := LengthOfLongestSubstring2(tt.args); got != tt.want {
+				t.Errorf("lengthOfLongestSubstring() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestLengthOfLongestSubstringGolangSubstring(t *testing.T) {
+	tests := setUpTests()
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := LengthOfLongestSubstring3(tt.args); got != tt.want {
+				t.Errorf("lengthOfLongestSubstring() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
