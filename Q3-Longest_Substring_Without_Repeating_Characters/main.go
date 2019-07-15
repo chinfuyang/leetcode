@@ -1,4 +1,4 @@
-package main // package github.com/YangChinFu/leetcode-go/3-Longest_Substring_Without_Repeating_Characters
+package main // package github.com/YangChinFu/leetcode-go/Q3-Longest_Substring_Without_Repeating_Characters
 
 import (
 	"strings"
