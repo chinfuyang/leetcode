@@ -15,4 +15,10 @@
 
 ## 更好的解法
 
-待補
+- 使用 sliding window 搭配 hashmap 解法:
+    
+    透過紀錄起始位址和結束位置，使用 for-loop 來 traversal 字串，並且使用 hash map 紀錄是否出現過，當有重複出現過的字元時，將此字元以前的出現的字元 map 歸零，並將 begin 移到重複字元之後。
+
+- 使用 substring 解法:
+
+    與 sliding windows 相似，只是不紀錄 hash map，而是改用 `strings.Index` 來找重複的字元位置，找到之後將重複字元位置以前的拋棄。
