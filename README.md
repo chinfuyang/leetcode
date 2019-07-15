@@ -4,6 +4,13 @@ The leetcode practice is written by golang.
 
 ## TODO
 
+## Commit Tag
+
+    - [FINISH] : 完成解法
+    - [CLEANUP] : 整理 repo
+    - [DOC] : 整理 ReadMe
+    - [WIP] : 寫題目中，暫時 commit
+
 ## Log
 
 |   Date   | Changes |
