@@ -7,20 +7,21 @@
 陣列不會為空
 
 - Example 1
-    ```
+
+    ```go
         nums1 = [1, 3]
         nums2 = [2]
-        
         the median is 2.0
     ```
+
 - Example 2
-    ```
+
+    ```go
         nums1 = [1, 2]
         nums2 = [3, 4]
-        
         the median is 2.5
     ```
 
 ## 解法
 
-    - 內建函數暴力解法
+- 內建函數暴力解法
