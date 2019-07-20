@@ -35,3 +35,14 @@ func TestFindMedianSortedArrays(t *testing.T) {
 		})
 	}
 }
+
+func TestFindMedianSortedArraysByMergeAlgorithm(t *testing.T) {
+	tests := setUpTests()
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := FindMedianSortedArrays2(tt.args.nums1, tt.args.nums2); got != tt.want {
+				t.Errorf("FindMedianSortedArrays() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}

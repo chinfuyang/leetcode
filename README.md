@@ -4,6 +4,8 @@ The leetcode practice is written by golang.
 
 ## TODO
 
+- [ ] : Q4 achieve O(log(m+n))
+
 ## Commit Tag
 
 - [FINISH] : 完成解法
@@ -15,6 +17,7 @@ The leetcode practice is written by golang.
 
 |   Date   | Changes |
 |----------|----------------------------|
+|07/20/2019| Q4: Median of Two Sorted Arrays solution 2|
 |07/15/2019| Q4: Median of Two Sorted Arrays|
 |          | Q3: Longest Substring Without Repeating Characters solution 2, 3|
 |07/14/2019| Q3: Longest Substring Without Repeating Characters|
