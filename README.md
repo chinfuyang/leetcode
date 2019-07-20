@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e8a30e957d824301ad5b235bea16935a)](https://app.codacy.com/app/YangChinFu/leetcode-go?utm_source=github.com&utm_medium=referral&utm_content=YangChinFu/leetcode-go&utm_campaign=Badge_Grade_Dashboard)
 # Leetcode-Go [![Build Status](https://travis-ci.org/YangChinFu/leetcode-go.svg?branch=master)](https://travis-ci.org/YangChinFu/leetcode-go) [![Go Report Card](https://goreportcard.com/badge/github.com/YangChinFu/leetcode-go)](https://goreportcard.com/report/github.com/YangChinFu/leetcode-go) [![Coverage Status](https://coveralls.io/repos/github/YangChinFu/leetcode-go/badge.svg)](https://coveralls.io/github/YangChinFu/leetcode-go)
 
 The leetcode practice is written by golang.
