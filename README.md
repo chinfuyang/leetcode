@@ -1,4 +1,4 @@
-# Leetcode-Go
+# Leetcode-Go [![Build Status](https://travis-ci.org/YangChinFu/leetcode-go.svg?branch=master)](https://travis-ci.org/YangChinFu/leetcode-go)
 
 The leetcode practice is written by golang.
 
