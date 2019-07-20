@@ -1,4 +1,4 @@
-# Leetcode-Go [![Build Status](https://travis-ci.org/YangChinFu/leetcode-go.svg?branch=master)](https://travis-ci.org/YangChinFu/leetcode-go) [![Go Report Card](https://goreportcard.com/badge/github.com/YangChinFu/leetcode-go)](https://goreportcard.com/report/github.com/YangChinFu/leetcode-go)
+# Leetcode-Go [![Build Status](https://travis-ci.org/YangChinFu/leetcode-go.svg?branch=master)](https://travis-ci.org/YangChinFu/leetcode-go) [![Go Report Card](https://goreportcard.com/badge/github.com/YangChinFu/leetcode-go)](https://goreportcard.com/report/github.com/YangChinFu/leetcode-go) [![Coverage Status](https://coveralls.io/repos/github/YangChinFu/leetcode-go/badge.svg)](https://coveralls.io/github/YangChinFu/leetcode-go)
 
 The leetcode practice is written by golang.
 

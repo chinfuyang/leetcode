@@ -71,5 +71,4 @@ func LengthOfLongestSubstring(s string) int {
 }
 
 func main() {
-	LengthOfLongestSubstring3("abcabcbb")
 }

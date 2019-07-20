@@ -16,5 +16,5 @@ func FindMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 }
 
 func main() {
-	FindMedianSortedArrays([]int{1, 3}, []int{2, 4})
+
 }

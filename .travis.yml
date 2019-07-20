@@ -3,6 +3,12 @@ language: go
 go:
   - 1.12.x
 
+before_install:
+  - go get github.com/mattn/goveralls
+
+script:
+  - goveralls -service=travis-ci
+
 notifications:
   email:
     - asd5242539@gmail.com
