@@ -1,0 +1,10 @@
+language: go
+
+go:
+  - 1.12.x
+
+notifications:
+  email:
+    - asd5242539@gmail.com
+  on_success: never
+  on_failure: always
