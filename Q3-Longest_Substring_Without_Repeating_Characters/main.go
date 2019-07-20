@@ -69,7 +69,3 @@ func LengthOfLongestSubstring(s string) int {
 
 	return ans
 }
-
-func main() {
-	LengthOfLongestSubstring3("abcabcbb")
-}
