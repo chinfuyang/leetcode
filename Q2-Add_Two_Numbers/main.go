@@ -62,6 +62,4 @@ func newList(values []int) *ListNode {
 	return headNode
 }
 func main() {
-	addTwoNumbers(newList([]int{2, 4, 3}), newList([]int{5, 6, 4}))
-	return
 }
