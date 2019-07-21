@@ -10,7 +10,8 @@ The leetcode practice is written by golang.
 ## Commit Tag
 
 - [FINISH] : 完成解法
-- [CLEANUP] : 整理 repo
+- [FIX] : 修改程式碼
+- [CLEANUP] : 整理程式碼
 - [DOC] : 整理 ReadMe
 - [WIP] : 寫題目中，暫時 commit
 
