@@ -18,6 +18,4 @@ func numJewelsInStones(J string, S string) int {
 }
 
 func main() {
-	numJewelsInStones("aA", "aAAbbbb")
-	return
 }

@@ -5,9 +5,11 @@ go:
 
 before_install:
   - go get github.com/mattn/goveralls
+  - chmod +x script/coveralls.sh
 
 script:
-  - goveralls -service=travis-ci
+  - go test -v ./...
+  - script/coveralls.sh --coveralls
 
 notifications:
   email:
