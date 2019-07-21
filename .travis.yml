@@ -8,7 +8,7 @@ before_install:
 
 script:
   - go test -v ./...
-  - script/coveralls.sh
+  - script/coveralls.sh --coveralls
 
 notifications:
   email:
