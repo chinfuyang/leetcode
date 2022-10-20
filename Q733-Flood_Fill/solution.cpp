@@ -38,4 +38,21 @@ public:
 
 		return image[row][col] == source_colr;
 	}
+
+	std::vector<std::vector<int>> floodFill2(std::vector<std::vector<int>>& image, int sr, int sc, int color) {
+		dfs(image, sr, sc, image[sr][sc], color);
+		return image;
+	}
+
+	void dfs(std::vector<std::vector<int>> &image, int row, int col, int origin_color, int new_color) {
+		if (row < 0 || col < 0 || row >= image.size() || col >= image[0].size() || origin_color == new_color || image[row][col] != origin_color) {
+			return;
+		}
+		image[row][col] = new_color;
+
+		dfs(image, row + 1, col, origin_color, new_color);
+		dfs(image, row - 1, col, origin_color, new_color);
+		dfs(image, row, col + 1, origin_color, new_color);
+		dfs(image, row, col - 1, origin_color, new_color);
+	}
 };
