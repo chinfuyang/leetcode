@@ -24,4 +24,22 @@ public:
 
         return false;
     }
+
+    bool hasCycle2(ListNode *head) {
+        
+        if (head == NULL) return false;
+
+        ListNode *fast = head, *slow = head;
+
+        while (fast != NULL && slow != NULL) {
+            fast = fast->next->next;
+            slow = slow->next;
+
+            if (slow == fast) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 };
