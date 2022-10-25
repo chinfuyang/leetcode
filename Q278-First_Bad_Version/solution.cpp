@@ -3,18 +3,16 @@
 
 class Solution {
 public:
-	
+
     int firstBadVersion(int n) {
-		bool preBad = isBadVersion(1);
-		if (preBad) return 1;
-		for (int i = 2; i < n; i++) {
-			bool curBad = isBadVersion(i);
-			if (! preBad && curBad) {
-				return i;
-			}
-			preBad = curBad;
+		int l = 1, r = n, mid = 1;
+		while (r - l >= 1)
+		{
+			mid = l + (r - l) / 2;
+			if (isBadVersion(mid)) r = mid;
+			else l = mid;
 		}
 
-		return n;
+		return r;
     }
 };
