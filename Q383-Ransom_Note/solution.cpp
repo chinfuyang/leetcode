@@ -1,29 +1,20 @@
-#include <map>
-
+#include <unordered_map>
 class Solution {
 public:
     bool canConstruct(string ransomNote, string magazine) {
-        std::map<char, int> rMap;
-        for (auto c: ransomNote)
-        {
-            rMap[c]++;
-        }
+        std::unordered_map<char, int> map;
         for (auto c: magazine)
         {
-            if (rMap.find(c) != rMap.end() && rMap[c] != 0)
-            {
-                rMap[c]--;
-            }
+            map[c]++;
         }
         
-        for (auto const& pair: rMap)
+        for (auto c: ransomNote)
         {
-            if (pair.second != 0)
+            if (--map[c] < 0)
             {
                 return false;
-            }
+		    };
         }
-        
         return true;
     }
 };
