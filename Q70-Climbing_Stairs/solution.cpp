@@ -4,11 +4,14 @@ public:
 
     int climbStairs(int n)
     {
-        if (n == 1)
-            return 1;
-        if (n == 2)
-            return 2;
+        std::unordered_map<int, int> map;
+        map = {{1,1}, {2,2}};
 
-        return climbStairs(n - 1) + climbStairs(n - 2);
+        for (int i = 3; i <= n; i++)
+        {
+            map[i] = map[i-1] + map[i-2];
+        }
+
+        return map[n];
     }
 };
