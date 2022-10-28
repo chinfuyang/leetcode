@@ -4,22 +4,22 @@ class Solution
 {
 public:
     int longestPalindrome(string s) {
-      
-        std::unordered_map<char, int> umap;
+        std::unordered_map<char, bool> umap;
 
+        int groupCount = 0;
         for (auto const &c : s)
         {
-            umap[c]++;
+            if (umap.find(c) == umap.end())
+            {
+                umap[c] = true;
+            }
+            else 
+            {
+                umap.erase(c);
+                groupCount++;
+            }
         }
 
-        int maxLength = 0;
-        for (auto const &pair: umap)
-        {
-            if (pair.second % 2 == 0) maxLength += pair.second;
-            else maxLength += (pair.second - 1);
-        }
-        if (s.size() > maxLength) maxLength++;
-
-        return maxLength;  
+        return groupCount * 2 + umap.empty() ? 0 : 1;
     }
 };
