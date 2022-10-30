@@ -1,45 +1,30 @@
-
-class Solution {
+class Solution
+{
 public:
-	int romanToInt(std::string s) {
-		std::unordered_map<std::string, int> mapping;
-		mapping["I"] = 1;
-		mapping["V"] = 5;
-		mapping["X"] = 10;
-		mapping["L"] = 50;
-		mapping["C"] = 100;
-		mapping["D"] = 500;
-		mapping["M"] = 1000;
-		mapping["IV"] = 4;
-		mapping["IX"] = 9;
-		mapping["XL"] = 40;
-		mapping["XC"] = 90;
-		mapping["CD"] = 400;
-		mapping["CM"] = 900;
+    int romanToInt(std::string s)
+    {
+        std::unordered_map<char, int> mapping{
+            {'I', 1},
+            {'V', 5},
+            {'X', 10},
+            {'L', 50},
+            {'C', 100},
+            {'D', 500},
+            {'M', 1000},
+        };
 
-		std::string nextChar = "";
-		int sum = 0;
-		for (int i = 0; i < s.size(); i++)
-		{
-			int numeral = 0;
-			if ((i + 1) < (s.size()))
-			{
-				nextChar.append(1, s[i + 1]);
-			}
-			if (mapping.find(s[i] + nextChar) != mapping.end())
-			{
-				sum += mapping[s[i] + nextChar];
-				i++;
-			}
-			else
-			{
-				std::string str;
-				str.append(1, s[i]);
-				sum += mapping[str];
-			}
-			nextChar = "";
-		}
+        if (s.size() == 1) return mapping[s[0]];
+        int sum = 0;
 
-		return sum;
-	}
+        for (int i = 0; i < s.size() - 1; i++)
+        {
+            if (mapping[s[i]] < mapping[s[i+1]]) 
+                sum -= mapping[s[i]];
+            else
+                sum += mapping[s[i]];
+        }
+        sum += mapping[s[s.size()-1]];
+
+        return sum;
+    }
 };
