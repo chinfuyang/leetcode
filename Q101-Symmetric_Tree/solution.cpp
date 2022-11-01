@@ -13,26 +13,15 @@ class Solution {
 public:
     bool isSymmetric(TreeNode* root) {
 		if (root->left == nullptr && root->right == nullptr) return true;
-        root->right = invert(root->right);
 
-		return isSame(root->left, root->right);
+		return isSymmetricTree(root->left, root->right);
     }
 
-	TreeNode *invert(TreeNode *root)
+	bool isSymmetricTree(TreeNode *left, TreeNode *right)
 	{
-		if (root == nullptr) return root;
-		std::swap(root->left, root->right);
-		root->left = invert(root->left);
-		root->right = invert(root->right);
+		if (left == nullptr && right == nullptr) return true;
+		if (left == nullptr || right == nullptr) return false;
 
-		return root;
-	}
-
-	bool isSame(TreeNode *tree1, TreeNode *tree2)
-	{
-		if (tree1 == nullptr && tree2 == nullptr) return true;
-		if (tree1 == nullptr || tree2 == nullptr) return false;
-
-		return tree1->val == tree2->val && isSame(tree1->left, tree2->left) && isSame(tree1->right, tree2->right);
+		return left->val == right->val && isSymmetricTree(left->right, right->left) && isSymmetricTree(left->left, right->right);
 	}
 };
